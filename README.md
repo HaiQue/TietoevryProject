@@ -1,5 +1,7 @@
-Get cat facts from Api: https://cat-fact.herokuapp.com/facts
+## Tieto project 
 
-Reformat them to suit dogs
+* Get cat facts from Api: https://cat-fact.herokuapp.com/facts
 
-Display in easy to view format
+* Reformat them to suit dogs
+
+* Display in easy to view format
