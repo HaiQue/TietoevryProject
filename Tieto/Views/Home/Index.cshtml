@@ -1,0 +1,41 @@
+﻿@model Cats;
+
+@{
+    var counter = 0;
+}
+
+<div class="text-left">
+    <div>
+        <img class="rounded mx-auto d-block" src="~/photos/dog.jpg" width="200" height:auto />
+        <div class="text-center">
+            <h3>Learn new facts about dogs</h3>
+        </div>
+    </div>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Facts</th>
+                <th scope="col">Upvotes</th>
+            </tr>
+        </thead>
+
+        @foreach (var cat in Model.All)
+        {
+            counter++;
+            <tbody>
+                <tr>
+                    <th scope="row">@counter</th>
+                    <td>
+                    @cat.Text.Replace("Cat", "Dog").Replace("Cats", "Dogs").Replace("cat", "dog").Replace("cats", "dogs").Replace(
+                        "kitten","dogger").Replace("kittens","doggers").Replace("kitty","puppy").Replace("Kittens","Doggers").Replace(
+                        "kitties","doggies").Replace("Tigers", "Big dog").Replace("tigers", "big dogs")
+                    </td>
+                    <td>@cat.Upvotes</td>
+                </tr>
+            </tbody>
+        }
+    </table>
+</div>
+
